@@ -1,0 +1,354 @@
+/*
+Theme Name: icannotfly's personal theme, 2021-02
+Theme URI: https://icannotfly.net/
+Version: 1.0.0
+Author: icannotfly
+Author URI: https://icannotfly.net/
+Description: it's for my own pesonal use officer i swear
+License: Apache
+License URI: http://www.apache.org/licenses/LICENSE-2.0
+Tags: secret-soviet-moonbase, bulk-iguana-trade-deals, lemon-scented-limes
+Text Domain: icnf-personal
+*/
+body {
+  font-family: "Domine", serif;
+  font-size: 1rem;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dXWBgYGHh4d5eXlzc3OLi4ubm5uVlZWPj4+NjY19fX2JiYl/f39ra2uRkZGZmZlpaWmXl5dvb29xcXGTk5NnZ2c8TV1mAAAAG3RSTlNAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAvEOwtAAAFVklEQVR4XpWWB67c2BUFb3g557T/hRo9/WUMZHlgr4Bg8Z4qQgQJlHI4A8SzFVrapvmTF9O7dmYRFZ60YiBhJRCgh1FYhiLAmdvX0CzTOpNE77ME0Zty/nWWzchDtiqrmQDeuv3powQ5ta2eN0FY0InkqDD73lT9c9lEzwUNqgFHs9VQce3TVClFCQrSTfOiYkVJQBmpbq2L6iZavPnAPcoU0dSw0SUTqz/GtrGuXfbyyBniKykOWQWGqwwMA7QiYAxi+IlPdqo+hYHnUt5ZPfnsHJyNiDtnpJyayNBkF6cWoYGAMY92U2hXHF/C1M8uP/ZtYdiuj26UdAdQQSXQErwSOMzt/XWRWAz5GuSBIkwG1H3FabJ2OsUOUhGC6tK4EMtJO0ttC6IBD3kM0ve0tJwMdSfjZo+EEISaeTr9P3wYrGjXqyC1krcKdhMpxEnt5JetoulscpyzhXN5FRpuPHvbeQaKxFAEB6EN+cYN6xD7RYGpXpNndMmZgM5Dcs3YSNFDHUo2LGfZuukSWyUYirJAdYbF3MfqEKmjM+I2EfhA94iG3L7uKrR+GdWD73ydlIB+6hgref1QTlmgmbM3/LeX5GI1Ux1RWpgxpLuZ2+I+IjzZ8wqE4nilvQdkUdfhzI5QDWy+kw5Wgg2pGpeEVeCCA7b85BO3F9DzxB3cdqvBzWcmzbyMiqhzuYqtHRVG2y4x+KOlnyqla8AoWWpuBoYRxzXrfKuILl6SfiWCbjxoZJUaCBj1CjH7GIaDbc9kqBY3W/Rgjda1iqQcOJu2WW+76pZC9QG7M00dffe9hNnseupFL53r8F7YHSwJWUKP2q+k7RdsxyOB11n0xtOvnW4irMMFNV4H0uqwS5ExsmP9AxbDTc9JwgneAT5vTiUSm1E7BSflSt3bfa1tv8Di3R8n3Af7MNWzs49hmauE2wP+ttrq+AsWpFG2awvsuOqbipWHgtuvuaAE+A1Z/7gC9hesnr+7wqCwG8c5yAg3AL1fm8T9AZtp/bbJGwl1pNrE7RuOX7PeMRUERVaPpEs+yqeoSmuOlokqw49pgomjLeh7icHNlG19yjs6XXOMedYm5xH2YxpV2tc0Ro2jJfxC50ApuxGob7lMsxfTbeUv07TyYxpeLucEH1gNd4IKH2LAg5TdVhlCafZvpskfncCfx8pOhJzd76bJWeYFnFciwcYfubRc12Ip/ppIhA1/mSZ/RxjFDrJC5xifFjJpY2Xl5zXdguFqYyTR1zSp1Y9p+tktDYYSNflcxI0iyO4TPBdlRcpeqjK/piF5bklq77VSEaA+z8qmJTFzIWiitbnzR794USKBUaT0NTEsVjZqLaFVqJoPN9ODG70IPbfBHKK+/q/AWR0tJzYHRULOa4MP+W/HfGadZUbfw177G7j/OGbIs8TahLyynl4X4RinF793Oz+BU0saXtUHrVBFT/DnA3ctNPoGbs4hRIjTok8i+algT1lTHi4SxFvONKNrgQFAq2/gFnWMXgwffgYMJpiKYkmW3tTg3ZQ9Jq+f8XN+A5eeUKHWvJWJ2sgJ1Sop+wwhqFVijqWaJhwtD8MNlSBeWNNWTa5Z5kPZw5+LbVT99wqTdx29lMUH4OIG/D86ruKEauBjvH5xy6um/Sfj7ei6UUVk4AIl3MyD4MSSTOFgSwsH/QJWaQ5as7ZcmgBZkzjjU1UrQ74ci1gWBCSGHtuV1H2mhSnO3Wp/3fEV5a+4wz//6qy8JxjZsmxxy5+4w9CDNJY09T072iKG0EnOS0arEYgXqYnXcYHwjTtUNAcMelOd4xpkoqiTYICWFq0JSiPfPDQdnt+4/wuqcXY47QILbgAAAABJRU5ErkJggg==);
+  background-color: lightgrey; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", serif; }
+
+h1 {
+  font-size: 5.5vh;
+  font-weight: 700; }
+
+h2 {
+  font-size: 2.125rem;
+  font-weight: 300; }
+
+/* navbar */
+nav {
+  font-family: "Roboto Mono", monospace; }
+
+nav.navbar-main-menu {
+  position: absolute;
+  top: 0px;
+  min-width: 100%; }
+  @media (max-width: 992px) {
+    nav.navbar-main-menu {
+      background-color: #444444f4;
+      box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.5); } }
+  nav.navbar-main-menu a:hover {
+    color: white !important;
+    /*border-bottom: $border-height solid white;
+    margin-bottom: calc( 1px * -1 );*/ }
+
+/* cards on front page */
+.card {
+  border-width: 0px; }
+  .card hr {
+    max-width: 0rem;
+    max-height: 0px;
+    border-top: 1px solid #ccc;
+    text-align: left;
+    margin-left: 0px;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem; }
+
+.card-title {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+.card-text {
+  font-size: 0.9rem; }
+  .card-text small {
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.75rem; }
+
+/* front page carousel */
+.swiper-pagination-bullet {
+  width: 14px !important;
+  height: 14px !important;
+  opacity: 0.4 !important;
+  background: #fff !important; }
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background: darkred !important; }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: darkred !important; }
+
+/* first two big cards*/
+.headline-card .card-img {
+  border-radius: 0px;
+  height: 85vh;
+  width: 100%;
+  object-fit: cover; }
+.headline-card .card-text-container {
+  min-height: 100%;
+  text-shadow: 2px 2px 3px black; }
+.headline-card a.btn {
+  text-shadow: none;
+  font-size: 0.9rem;
+  font-family: "Roboto Mono", monospace; }
+
+/* all other cards */
+.standard-card .card-img {
+  height: 44vh;
+  width: 100%;
+  object-fit: cover; }
+
+.card-title {
+  margin-top: 1.5rem; }
+
+/* post list pages */
+main.index header {
+  min-height: 55vh;
+  background-color: #444;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25); }
+  main.index header .row {
+    min-height: 55vh; }
+  main.index header h1 {
+    text-align: center; }
+
+.post-list {
+  margin-top: 4rem; }
+
+/* bottom of post list */
+.post-list-footer {
+  padding-top: calc(4rem - 24px);
+  padding-bottom: 4rem; }
+  .post-list-footer a {
+    color: darkred !important; }
+
+.page-item.active .current {
+  background-color: darkred;
+  border-color: darkred; }
+
+.page-link {
+  color: darkred; }
+
+.page-link:hover {
+  color: red; }
+
+/* single post */
+main.single header .card {
+  border-width: 0px;
+  border-radius: 0px; }
+  main.single header .card .row.m-0 {
+    min-height: 100%; }
+main.single header .card-image-overlay {
+  text-shadow: 2px 2px 3px black; }
+main.single header h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75); }
+main.single header p.card-text {
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75); }
+main.single header figcaption {
+  font-size: 0.9rem;
+  margin-left: calc(16px + 12px);
+  margin-right: calc(16px + 12px);
+  margin-top: calc(calc(16px + 12px) / 2); }
+
+.story-header-image {
+  border-radius: 0px;
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  object-fit: cover; }
+
+.post-info {
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 0.15rem solid #aaa;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem; }
+  .post-info a.btn {
+    padding: 2px 6px;
+    font-family: "Roboto Mono", monospace; }
+  .post-info a.btn:hover {
+    color: white !important; }
+
+.single .article-content {
+  font-size: 1.125rem;
+  line-height: 168% !important; }
+  .single .article-content p,
+  .single .article-content h1,
+  .single .article-content h2,
+  .single .article-content h3,
+  .single .article-content h4,
+  .single .article-content h5,
+  .single .article-content h6,
+  .single .article-content ol,
+  .single .article-content ul,
+  .single .article-content blockquote {
+    max-width: 44rem;
+    margin-left: auto;
+    margin-right: auto; }
+    @media (max-width: 768px) {
+      .single .article-content p,
+      .single .article-content h1,
+      .single .article-content h2,
+      .single .article-content h3,
+      .single .article-content h4,
+      .single .article-content h5,
+      .single .article-content h6,
+      .single .article-content ol,
+      .single .article-content ul,
+      .single .article-content blockquote {
+        max-width: 100vw;
+        margin-left: 1rem;
+        margin-right: 1rem; } }
+  .single .article-content h1,
+  .single .article-content h2 {
+    font-weight: 500; }
+  .single .article-content h3,
+  .single .article-content h4,
+  .single .article-content h5,
+  .single .article-content h6 {
+    font-weight: 400; }
+  .single .article-content .badge {
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-weight: unset; }
+
+ul.blocks-gallery-grid {
+  max-width: 100% !important; }
+
+.wp-block-separator {
+  max-width: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 0.2rem solid #aaa;
+  opacity: 1; }
+
+.single figure.wp-block-image,
+.single figure.wp-block-gallery {
+  padding-top: 2rem;
+  padding-bottom: calc(2rem + 1rem); }
+
+figure.wp-block-image figcaption,
+figure.wp-block-gallery figcaption {
+  font-size: 0.9rem;
+  border-bottom: 1px solid #aaa;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  min-width: 44rem;
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5; }
+  @media (max-width: 768px) {
+    figure.wp-block-image figcaption,
+    figure.wp-block-gallery figcaption {
+      min-width: 100%;
+      max-width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+
+figure.size-medium {
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (max-width: 768px) {
+    figure.size-medium {
+      min-width: 100%;
+      max-width: 100%; } }
+
+figure.size-large,
+figure.wp-block-gallery.columns-2 {
+  min-width: calc( (100vw - 44rem) / 2 + 44rem );
+  max-width: calc( (100vw - 44rem) / 2 + 44rem );
+  margin-left: auto;
+  margin-right: auto; }
+  figure.size-large img,
+  figure.wp-block-gallery.columns-2 img {
+    min-width: 100%; }
+  @media (max-width: 768px) {
+    figure.size-large,
+    figure.wp-block-gallery.columns-2 {
+      min-width: 100%;
+      max-width: 100%; } }
+
+figure.size-full {
+  min-width: 100%; }
+  figure.size-full img {
+    min-width: 100%; }
+
+.blocks-gallery-item__caption {
+  background: none !important;
+  min-width: unset !important; }
+
+.wp-block-quote {
+  border-left: 0.333rem solid #aaa;
+  padding-left: 2rem;
+  padding-right: 2rem; }
+  .wp-block-quote cite {
+    font-size: 0.95rem;
+    opacity: 0.9; }
+
+.prev-next-posts {
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 0.15rem solid #aaa;
+  border-bottom: 0.15rem solid #aaa;
+  margin-top: calc(4rem - 1rem);
+  margin-bottom: 4rem;
+  padding-top: calc(4rem / 3);
+  padding-bottom: calc(4rem / 3); }
+  .prev-next-posts div.col-md-6:first-of-type {
+    padding-left: 0px; }
+    .prev-next-posts div.col-md-6:first-of-type .col {
+      padding-left: 0.125rem; }
+  .prev-next-posts div.col-md-6:last-of-type {
+    padding-right: 0px;
+    text-align: right !important; }
+    .prev-next-posts div.col-md-6:last-of-type .col {
+      padding-right: 0.125rem; }
+  .prev-next-posts .title {
+    font-family: "Roboto Mono", monospace; }
+  .prev-next-posts i {
+    font-size: 2.25rem; }
+
+.no-posts-warning {
+  font-size: 1.25rem;
+  font-family: "Roboto Mono", monospace; }
+  .no-posts-warning i {
+    font-size: 2.5rem; }
+
+footer.page-footer {
+  background-color: #ccc; }
+  footer.page-footer p {
+    margin-bottom: 0.5rem; }
+
+.footer-search input {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px; }
+.footer-search button {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px; }
+
+.copyright-info {
+  font-size: 8pt;
+  text-align: center; }
+  @media (min-width: 992px) {
+    .copyright-info {
+      text-align: right; } }
+
+a {
+  color: darkred; }
+
+a:hover {
+  color: red !important; }
