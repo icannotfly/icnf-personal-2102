@@ -14,4 +14,18 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="style.scss">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="index.php">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="header.php">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="footer.php">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
