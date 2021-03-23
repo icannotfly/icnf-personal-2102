@@ -18,6 +18,7 @@
 
                 <p>Design, code, images, and other creative works copyright &copy; 2017 - 2021 <a href="https://twitter.com/sovietmoonbase">icannotfly</a> unless otherwise specified. Source code available on <a href="https://github.com/icannotfly/icnf-personal-2102">Github</a> under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache license</a>. Some images availalbe for licensing on <a href="https://500px.com/icannotfly">500px</a>.</p>
                 <p class="mb-0"><em>Flying Umbrella Dude Man Guy</em> is based on an original work by <a href="https://theppegfx.deviantart.com/">ThePpeGFX</a> and used with permission.</p>
+                <p><a href="https://www.icannotfly.net/privacy-policy/">Privacy</a></p>
 
             </div>
         </nav>
