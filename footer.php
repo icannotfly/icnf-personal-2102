@@ -5,12 +5,12 @@
         <nav class="row navbar navbar-light justify-content-center mx-0">
             <div class="col-10 col-md-6 col-lg-4 px-0 footer-search">
 
-                <form>
+                <!--<form>
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search" aria-label="Search term" aria-describedby="footer-search-button">
                         <button class="btn btn-outline-light" type="button" id="footer-search-button"><i class="bi bi-search"></i></button>
                     </div>
-                </form>
+                </form>-->
 
             </div>
             <div class="col-12 col-lg-2"></div>
