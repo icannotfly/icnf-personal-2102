@@ -356,12 +356,16 @@ ul.blocks-gallery-grid {
     opacity: 1;
 }
 
-.single {
-    figure.wp-block-image,
-    figure.wp-block-gallery {
-        $padding: 2rem;
-        padding-top: $padding;
-        padding-bottom: calc(#{$padding} + 1rem);
+figure.wp-block-image,
+figure.wp-block-gallery {
+    $padding: 2.75rem;
+    padding-top: $padding;
+    //padding-bottom: calc(#{$padding} + 1rem); //what was the point of this?
+    padding-bottom: $padding;
+    margin-bottom: 0px !important;
+
+    img {
+        height: auto;
     }
 }
 
@@ -394,6 +398,10 @@ figure.size-medium {
     @media(max-width: 768px) {
         min-width: 100%;
         max-width: 100%;
+    }
+
+    img {
+        min-width: 100%;
     }
 }
 

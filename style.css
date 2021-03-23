@@ -233,10 +233,14 @@ ul.blocks-gallery-grid {
   border-bottom: 0.2rem solid #aaa;
   opacity: 1; }
 
-.single figure.wp-block-image,
-.single figure.wp-block-gallery {
-  padding-top: 2rem;
-  padding-bottom: calc(2rem + 1rem); }
+figure.wp-block-image,
+figure.wp-block-gallery {
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+  margin-bottom: 0px !important; }
+  figure.wp-block-image img,
+  figure.wp-block-gallery img {
+    height: auto; }
 
 figure.wp-block-image figcaption,
 figure.wp-block-gallery figcaption {
@@ -265,6 +269,8 @@ figure.size-medium {
     figure.size-medium {
       min-width: 100%;
       max-width: 100%; } }
+  figure.size-medium img {
+    min-width: 100%; }
 
 figure.size-large,
 figure.wp-block-gallery.columns-2 {
