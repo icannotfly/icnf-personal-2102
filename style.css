@@ -295,7 +295,7 @@ figure.wp-block-gallery {
   margin-bottom: 0px !important; }
   figure.wp-block-image img,
   figure.wp-block-gallery img {
-    height: auto; }
+    height: auto !important; }
 
 figure.wp-block-image figcaption,
 figure.wp-block-gallery figcaption {
