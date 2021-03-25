@@ -8,11 +8,31 @@
         <div class="row m-0 justify-content-center">
 
             <div class="col-xl-6 col-lg-7 col-9 align-self-center">
-                <h1><?php if( is_home() ) { echo 'All Posts'; } else { echo single_term_title(); } ?></h1>
+                <h1><?php
+                    if( is_home() ) {
+                        echo 'All Posts';
+                    } else if( is_search() ) {
+                        echo 'Results for "';
+                        echo the_search_query();
+                        echo '":';
+                    } else {
+                        echo single_term_title();
+                    }
+                ?></h1>
                         
                 <?php if( the_archive_description() ): ?>
                 <p class="small"><?php the_archive_description(); ?></p>
                 <?php endif; ?>
+
+                <?php if(is_search()) {
+                    echo 'Found ';
+                    echo $wp_query->found_posts;
+                    echo ' result';
+                    if( $wp_query->found_posts != 1 ) {
+                        echo 's';
+                    }
+                    echo '.';
+                } ?>
 
             </div>
         </div>

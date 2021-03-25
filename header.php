@@ -29,6 +29,9 @@ limitations under the License.
                 the_title();
             } else if( is_home() ) {
                 echo("All Posts");
+            } else if( is_search() ) {
+                echo 'Search results for "';
+                echo the_search_query();
             } else {
                 single_term_title();
             }
