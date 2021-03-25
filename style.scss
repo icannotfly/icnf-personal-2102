@@ -1,7 +1,7 @@
 /*
 Theme Name: icannotfly's personal theme, 2021-02
 Theme URI: https://icannotfly.net/
-Version: 1.2.1
+Version: 1.3.0
 Author: icannotfly
 Author URI: https://icannotfly.net/
 Description: it's for my own pesonal use officer i swear
@@ -532,8 +532,9 @@ ul.blocks-gallery-grid {
     max-width: 100% !important;
 }
 
-// "medium" sized images
-figure.size-medium {
+// "medium" (column-width) sized images
+figure.size-medium,
+figure.size-img-column-width {
     @include article-width;
 
     @media(max-width: 768px) {
@@ -546,8 +547,9 @@ figure.size-medium {
     }
 }
 
-// "large" sized images and 2-column galleries
+// "large" (between column- and full-width) sized images and 2-column galleries
 figure.size-large,
+figure.size-img-half-width,
 figure.wp-block-gallery.columns-2 {
     @include margin-x-auto;
     $width: calc( (100vw - #{$post-max-width}) / 2 + #{$post-max-width} ); // honestly don't remember how I came up with this
@@ -564,8 +566,9 @@ figure.wp-block-gallery.columns-2 {
     }
 }
 
-// "full" sized images
-figure.size-full {
+// "full" (100% screen width) sized images
+figure.size-full,
+figure.size-img-full-width {
     min-width: 100%;
 
     img {

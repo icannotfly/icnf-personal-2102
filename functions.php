@@ -199,6 +199,7 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true ) {
 
 // removes width and height attributes from img tags - needed to get responsive images working
 // from https://wordpress.stackexchange.com/questions/29881/stop-wordpress-from-hardcoding-img-width-and-height-attributes
+// NOTE - looks like this doesn't work
 /**
  * This is a modification of image_downsize() function in wp-includes/media.php
  * we will remove all the width and height references, therefore the img tag
@@ -242,6 +243,31 @@ function stackexchange_image_downsize( $value = false, $id, $size ) {
  * params are 3.
  */
 add_filter( 'image_downsize', 'stackexchange_image_downsize', 1, 3 );
+
+
+
+
+
+/*------------------------
+    custom image sizes
+------------------------*/
+
+add_theme_support( 'post-thumbnails' );
+add_action( 'after_setup_theme', 'set_up_custom_image_sizes' );
+function set_up_custom_image_sizes() {
+    add_image_size( 'img-column-width',  720 );
+    add_image_size( 'img-half-width',   1320 );
+    add_image_size( 'img-full-width',   1920 );
+}
+
+add_filter( 'image_size_names_choose', 'my_custom_sizes' );
+function my_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'img-column-width' => __( 'Column width' ),
+        'img-half-width' => __( 'Half width' ),
+        'img-full-width' => __( 'Full width' )
+    ) );
+}
 
 
 

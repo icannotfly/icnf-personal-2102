@@ -1,7 +1,7 @@
 /*
 Theme Name: icannotfly's personal theme, 2021-02
 Theme URI: https://icannotfly.net/
-Version: 1.2.1
+Version: 1.3.0
 Author: icannotfly
 Author URI: https://icannotfly.net/
 Description: it's for my own pesonal use officer i swear
@@ -321,18 +321,22 @@ figure.wp-block-gallery figcaption {
 ul.blocks-gallery-grid {
   max-width: 100% !important; }
 
-figure.size-medium {
+figure.size-medium,
+figure.size-img-column-width {
   max-width: 46rem;
   margin-left: auto;
   margin-right: auto; }
   @media (max-width: 768px) {
-    figure.size-medium {
+    figure.size-medium,
+    figure.size-img-column-width {
       min-width: 100%;
       max-width: 100%; } }
-  figure.size-medium img {
+  figure.size-medium img,
+  figure.size-img-column-width img {
     min-width: 100%; }
 
 figure.size-large,
+figure.size-img-half-width,
 figure.wp-block-gallery.columns-2 {
   margin-left: auto;
   margin-right: auto;
@@ -340,16 +344,20 @@ figure.wp-block-gallery.columns-2 {
   max-width: calc( (100vw - 46rem) / 2 + 46rem ); }
   @media (max-width: 768px) {
     figure.size-large,
+    figure.size-img-half-width,
     figure.wp-block-gallery.columns-2 {
       min-width: 100%;
       max-width: 100%; } }
   figure.size-large img,
+  figure.size-img-half-width img,
   figure.wp-block-gallery.columns-2 img {
     min-width: 100%; }
 
-figure.size-full {
+figure.size-full,
+figure.size-img-full-width {
   min-width: 100%; }
-  figure.size-full img {
+  figure.size-full img,
+  figure.size-img-full-width img {
     min-width: 100%; }
 
 .blocks-gallery-item__caption {
