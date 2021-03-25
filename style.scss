@@ -1,7 +1,7 @@
 /*
 Theme Name: icannotfly's personal theme, 2021-02
 Theme URI: https://icannotfly.net/
-Version: 1.0.7
+Version: 1.0.8
 Author: icannotfly
 Author URI: https://icannotfly.net/
 Description: it's for my own pesonal use officer i swear
@@ -13,6 +13,12 @@ Text Domain: icnf-personal
 
 
 
+
+
+/*
+    globals
+*/
+
 $headline-font-stack: "Merriweather", serif;
 $nav-font-stack: "Roboto Mono", monospace;
 $body-font-stack: "Domine", serif;
@@ -23,7 +29,30 @@ $lightgrey: #ccc;
 $grey: #aaa;
 $darkgrey: #444;
 
+$section-dividing-border: 0.15rem solid $grey;
 
+$section-spacing: 4rem;
+
+$post-max-width: 46rem;
+
+@mixin article-width {
+    max-width: $post-max-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin margin-x-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+/*
+    site-wide
+*/
 
 body {
     font-family: $body-font-stack;
@@ -51,11 +80,22 @@ h2 {
     font-weight: 300;
 }
 
+a {
+    color: $link-color;
+}
+
+a:hover {
+    color: $link-hover-color !important;
+}
 
 
 
 
-/* navbar */
+
+/*
+    navbar
+*/
+
 nav {
     font-family: $nav-font-stack;
 }
@@ -72,10 +112,6 @@ nav.navbar-main-menu {
 
     a:hover {
         color: white !important;
-
-        $border-height: 1px;
-        /*border-bottom: $border-height solid white;
-        margin-bottom: calc( #{$border-height} * -1 );*/
     }
 }
 
@@ -83,14 +119,56 @@ nav.navbar-main-menu {
 
 
 
-/* cards on front page */
+/*
+    page footer
+*/
+
+footer.page-footer {
+    background-color: $lightgrey;
+
+    p {
+        margin-bottom: calc(#{$section-spacing} / 8);
+    }
+}
+
+.footer-search {
+    input {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    button {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+}
+
+.copyright-info {
+    font-size: 8pt;
+    text-align: center;
+
+    @media(min-width: 992px) {
+        text-align: right;
+    }
+}
+
+
+
+
+
+/*
+    front-page.php
+*/
+
+// post list cards
+
 .card {
     border-width: 0px;
 
     hr {
         max-width: 0rem;
         max-height: 0px;
-        border-top: 1px solid #ccc;
+        border-top: 1px solid $lightgrey;
         text-align: left;
         margin-left: 0px;
         margin-top: 1.2rem;
@@ -99,14 +177,14 @@ nav.navbar-main-menu {
 }
 
 .card-title {
-    $vmargin: 1.5rem;
-    margin-top: $vmargin;
-    margin-bottom: $vmargin;
+    $spacing-y: 1.5rem;
+    margin-top: $spacing-y;
+    margin-bottom: $spacing-y;
 }
 
 .card-text {
     font-size: 0.9rem;
-    
+
     small {
         font-family: $nav-font-stack;
         font-size: 0.75rem;
@@ -115,14 +193,16 @@ nav.navbar-main-menu {
 
 
 
-/* front page carousel */
+// front page swiper carousel
+
 .swiper-pagination-bullet {
-    $size: 14px;
-    width: $size !important;
-    height: $size !important;
+    $bullet-size: 14px;
+    width: $bullet-size !important;
+    height: $bullet-size !important;
     opacity: 0.4 !important;
     background: #fff !important;
 }
+
 .swiper-pagination-bullet-active {
     opacity: 1 !important;
     background: $link-color !important;
@@ -130,20 +210,31 @@ nav.navbar-main-menu {
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: $link-color !important ;
+    color: $link-color !important;
 }
 
 
 
-/* first two big cards*/
+// all cards
+
+.headline-card,
+.standard-card {
+    .card-img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+// carousel cards
+
 .headline-card {
     $headline-card-shadow: 2px 2px 3px black;
 
     .card-img {
         border-radius: 0px;
         height: 85vh;
-        width: 100%;
-        object-fit: cover;
     }
 
     .card-text-container {
@@ -160,55 +251,27 @@ nav.navbar-main-menu {
 
 
 
-/* all other cards */
-.standard-card {
+// regular sized cards
 
+.standard-card {
     .card-img {
         height: 44vh;
-        width: 100%;
-        object-fit: cover;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .card-title {
+        margin-top: 1.5rem;
     }
 }
 
-.card-title {
-    margin-top: 1.5rem;
-}
 
 
+// post list footer (pagination, "all posts link"
 
-
-
-/* post list pages */
-main.index header {
-    $height: 55vh;
-
-    min-height: $height;
-    background-color: $darkgrey;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-
-    .row {
-        min-height: $height;
-    }
-
-    h1 {
-        text-align: center;
-    }
-}
-
-.post-list {
-    margin-top: 4rem;
-}
-
-
-
-
-
-/* bottom of post list */
 .post-list-footer {
-    $padding: 4rem;
-    padding-top: calc(#{$padding} - 24px);
-    padding-bottom: $padding;
+    padding-top: calc(#{$section-spacing} - 1.5rem /*.card margin-bottom*/ );
+    padding-bottom: $section-spacing;
 
     a {
         color: $link-color !important;
@@ -232,73 +295,130 @@ main.index header {
 
 
 
-/* single post */
-$section-dividing-border: 0.15rem solid $grey;
+/*
+    index.php, page.php shared
+*/
 
-main.single {
-    header {
-        .card {
-            border-width: 0px;
-            border-radius: 0px;
+// header
+main.index header,
+main.page header {
+    background-color: $darkgrey;
+    color: /*r*/#eeeeee;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 
-            .row.m-0 {
-                min-height: 100%;
-            }
-        }
+    margin-bottom: $section-spacing;
 
-        .card-image-overlay {
-            text-shadow: 2px 2px 3px black;
-        }
-
-        h1 {
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.75);
-        }
-
-        p.card-text {
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.75);
-        }
-
-        figcaption {
-            $margin-x: calc(16px + 12px);
-            font-size: 0.9rem;
-            margin-left: $margin-x;
-            margin-right: $margin-x;
-            margin-top: calc(#{$margin-x} / 2);
-        }
+    h1 {
+        text-align: center;
     }
 }
 
-.story-header-image {
-    border-radius: 0px;
-    min-height: 100vh;
-    max-height: 100vh;
-    width: 100%;
-    object-fit: cover;
-}
 
-$post-max-width: 44rem;
 
-.post-info {
-    max-width: $post-max-width;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom: $section-dividing-border;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-    padding-bottom: 1rem;
 
-    a.btn {
-        padding: 2px 6px;
-        font-family: $nav-font-stack;
-    }
 
-    a.btn:hover {
-        color: white !important;
+/*
+    index.php
+*/
+
+// header
+
+main.index header {
+    $height: 55vh;
+    min-height: $height;
+
+    .row {
+        min-height: $height;
     }
 }
 
-.single .article-content {
+
+
+// "no posts" warning
+
+.no-posts-warning {
+    font-size: 1.25rem;
+    font-family: $nav-font-stack;
+
+    i {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+
+/*
+    page.php
+*/
+
+// header
+
+main.page header {
+    $height: 40vh;
+    min-height: $height;
+
+    .row {
+        min-height: $height;
+    }
+}
+
+
+
+
+
+/*
+    single.php
+*/
+
+// header
+
+main.single header {
+    .card {
+        border-width: 0px;
+        border-radius: 0px;
+
+        .row.m-0 {
+            min-height: 100%;
+        }
+    }
+
+    .card-img {
+        border-radius: 0px;
+        min-height: 100vh;
+        max-height: 100vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-image-overlay {
+        text-shadow: 2px 2px 3px black;
+    }
+
+    h1 {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.75);
+    }
+
+    p.card-text {
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.75);
+    }
+
+    figcaption {
+        $spacing-x: calc(1rem /*container padding*/ + calc(var(--bs-gutter-x)/ 2) /*row gutter*/ );
+        font-size: 0.9rem;
+        margin-left: $spacing-x;
+        margin-right: $spacing-x;
+        margin-top: calc(#{$spacing-x} / 2);
+    }
+}
+
+
+
+// common
+
+.article-content {
     p,
     h1,
     h2,
@@ -308,10 +428,9 @@ $post-max-width: 44rem;
     h6,
     ol,
     ul,
-    blockquote {
-        max-width: $post-max-width;
-        margin-left: auto;
-        margin-right: auto;
+    blockquote,
+    .wp-block-separator {
+        @include article-width;
 
         @media(max-width: 768px) {
             max-width: 100vw;
@@ -341,30 +460,46 @@ $post-max-width: 44rem;
     }
 
     font-size: 1.125rem;
-    line-height: 168% !important;
-}
-
-ul.blocks-gallery-grid {
-    max-width: 100% !important;
+    line-height: 161.8% !important; // dat golden ratio
 }
 
 .wp-block-separator {
-    max-width: 28rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom: 0.15rem solid $grey;
+    max-width: 28rem !important;
+    border-bottom: $section-dividing-border;
     opacity: 1;
-    $spacing: 5rem;
-    margin-top: $spacing;
-    margin-bottom: $spacing;
+    margin-top: calc(#{$section-spacing} * 1.25);
+    margin-bottom: calc(#{$section-spacing} * 1.25);
 }
+
+
+
+// post info (datetime, categories)
+
+.post-info {
+    @include article-width;
+    border-bottom: $section-dividing-border;
+    margin-top: calc(#{$section-spacing} * 0.25);
+    margin-bottom: calc(#{$section-spacing} * 0.75);
+    padding-bottom: calc(#{$section-spacing} * 0.25);
+
+    a.btn {
+        padding: 2px 6px;
+        font-family: $nav-font-stack;
+    }
+
+    a.btn:hover {
+        color: white !important;
+    }
+}
+
+
+
+// figures, images, and related
 
 figure.wp-block-image,
 figure.wp-block-gallery {
-    $padding: 2.75rem;
-    padding-top: $padding;
-    //padding-bottom: calc(#{$padding} + 1rem); //what was the point of this?
-    padding-bottom: $padding;
+    padding-top: calc(#{$section-spacing} * 0.667);
+    padding-bottom: calc(#{$section-spacing} * 0.667);
     margin-bottom: 0px !important;
 
     img {
@@ -374,14 +509,11 @@ figure.wp-block-gallery {
 
 figure.wp-block-image figcaption,
 figure.wp-block-gallery figcaption {
+    @include article-width;
     font-size: 0.9rem;
-    border-bottom: 1px solid $grey;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    min-width: $post-max-width;
-    max-width: $post-max-width;
-    margin-left: auto;
-    margin-right: auto;
+    border-bottom: $section-dividing-border;
+    padding-top: calc(#{$section-spacing} / 16);
+    padding-bottom: calc(#{$section-spacing} / 16);
     line-height: 1.5;
 
     figure figcaption {
@@ -391,16 +523,18 @@ figure.wp-block-gallery figcaption {
     @media(max-width: 768px) {
         min-width: 100%;
         max-width: 100%;
-        $padding: 1rem;
-        padding-left: $padding;
-        padding-right: $padding;
+        padding-left: calc(#{$section-spacing} * 0.25);
+        padding-right: calc(#{$section-spacing} * 0.25);
     }
 }
 
+ul.blocks-gallery-grid {
+    max-width: 100% !important;
+}
+
+// "medium" sized images
 figure.size-medium {
-    max-width: $post-max-width;
-    margin-left: auto;
-    margin-right: auto;
+    @include article-width;
 
     @media(max-width: 768px) {
         min-width: 100%;
@@ -412,24 +546,25 @@ figure.size-medium {
     }
 }
 
+// "large" sized images and 2-column galleries
 figure.size-large,
 figure.wp-block-gallery.columns-2 {
-    $width: calc( (100vw - #{$post-max-width}) / 2 + #{$post-max-width} );
+    @include margin-x-auto;
+    $width: calc( (100vw - #{$post-max-width}) / 2 + #{$post-max-width} ); // honestly don't remember how I came up with this
     min-width: $width;
     max-width: $width;
-    margin-left: auto;
-    margin-right: auto;
-
-    img {
-        min-width: 100%;
-    }
 
     @media(max-width: 768px) {
         min-width: 100%;
         max-width: 100%;
     }
+
+    img {
+        min-width: 100%;
+    }
 }
 
+// "full" sized images
 figure.size-full {
     min-width: 100%;
 
@@ -447,30 +582,27 @@ figure.size-full {
     border-left: 0.333rem solid $grey;
 
     $padding: 2rem;
-    padding-left: $padding;
-    padding-right: $padding;
+    padding-left: calc(#{$section-spacing} * 0.5);
+    padding-right: calc(#{$section-spacing} * 0.5);
 
     cite {
         font-size: 0.95rem;
-        opacity: 0.9;
+        color: /*r*/#eeeeee;
     }
 }
 
 
 
-
+// previous/next post buttons
 
 .prev-next-posts {
-    max-width: $post-max-width;
-    margin-left: auto;
-    margin-right: auto;
+    @include article-width;
     border-top: $section-dividing-border;
     border-bottom: $section-dividing-border;
-    $spacing: 4rem;
-    margin-top: calc(#{$spacing} - 1rem);
-    margin-bottom: $spacing;
-    padding-top:    calc(#{$spacing} / 3);
-    padding-bottom: calc(#{$spacing} / 3);
+    margin-top: calc(#{$section-spacing} - 1rem);
+    margin-bottom: $section-spacing;
+    padding-top: calc(#{$section-spacing} / 3);
+    padding-bottom: calc(#{$section-spacing} / 3);
 
     div.col-md-6:first-of-type {
         padding-left: 0px;
@@ -496,63 +628,4 @@ figure.size-full {
     i {
         font-size: 2.25rem;
     }
-}
-
-
-
-
-
-.no-posts-warning {
-    font-size: 1.25rem;
-    font-family: $nav-font-stack;
-
-    i {
-        font-size: 2.5rem;
-    }
-}
-
-
-
-
-
-footer.page-footer {
-    background-color: $lightgrey;
-
-    p {
-        margin-bottom: 0.5rem;
-    }
-}
-
-.footer-search {
-    input {
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
-    }
-    button {
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
-    }
-}
-
-.copyright-info {
-    font-size: 8pt;
-    text-align: center;
-
-    @media(min-width: 992px) {
-        text-align: right;
-    }
-}
-
-
-
-
-
-
-
-a {
-    color: $link-color;
-}
-
-a:hover {
-    color: $link-hover-color !important;
 }
