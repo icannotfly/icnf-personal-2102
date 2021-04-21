@@ -1,7 +1,7 @@
 /*
 Theme Name: icannotfly's personal theme, 2021-02
 Theme URI: https://icannotfly.net/
-Version: 1.3.5
+Version: 1.3.6
 Author: icannotfly
 Author URI: https://icannotfly.net/
 Description: it's for my own pesonal use officer i swear
@@ -558,12 +558,13 @@ figure.size-img-column-width {
     }
 }
 
-// "large" (between column- and full-width) sized images and 2-column galleries
+// "large" (between column- and full-width) sized images, 2-column galleries, and jetpack galleries
 figure.size-large,
 figure.size-img-half-width,
-figure.wp-block-gallery.columns-2 {
+figure.wp-block-gallery.columns-2,
+.wp-block-jetpack-tiled-gallery {
     @include margin-x-auto;
-    $width: calc( (100vw - #{$post-max-width}) / 2 + #{$post-max-width} ); // honestly don't remember how I came up with this
+    $width: calc( (100vw - #{$post-max-width}) / 2 + #{$post-max-width} ); // honestly don't remember how I came up with this formula
     min-width: $width;
     max-width: $width;
 
@@ -634,8 +635,73 @@ figure.wp-block-pullquote {
 
 
 
-// previous/next post buttons
+// "fixes" for jetpack tiled gallery - why is this so broken to begin with?
+$image-spacing: 0.1rem;
 
+.wp-block-jetpack-tiled-gallery {
+    padding-top: calc(#{$section-spacing} * 0.667 - 1rem);
+    padding-bottom: calc(#{$section-spacing} * 0.667);
+}
+
+.tiled-gallery__gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tiled-gallery__row {
+    flex-grow: 1;
+    width: 100%;
+    margin-left: calc(#{$image-spacing} * -1);
+    margin-right: calc(#{$image-spacing} * -1);
+}
+
+.wp-block-jetpack-tiled-gallery.is-style-square {
+
+    .tiled-gallery__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .tiled-gallery__row.columns-2 {
+        //width: calc((100% - 4px) / 2);
+        width: 100%;
+    }
+}
+
+.tiled-gallery__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+
+.tiled-gallery__item {
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    flex-grow: 1;
+
+    a,
+    img,
+    a > img {
+        display: block;
+        height: auto;
+        margin: 0;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        padding: $image-spacing;
+    }
+}
+
+
+
+// previous/next post buttons
 .prev-next-posts {
     @include article-width;
     border-top: $section-dividing-border;
