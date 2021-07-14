@@ -1,7 +1,7 @@
 /*
 Theme Name: icannotfly's personal theme, 2021-02
 Theme URI: https://icannotfly.net/
-Version: 1.3.6
+Version: 1.3.7
 Author: icannotfly
 Author URI: https://icannotfly.net/
 Description: it's for my own pesonal use officer i swear
@@ -296,9 +296,9 @@ figure.wp-block-gallery {
   padding-top: calc(4rem * 0.667);
   padding-bottom: calc(4rem * 0.667);
   margin-bottom: 0px !important; }
-  figure.wp-block-image img,
-  figure.wp-block-gallery img {
-    height: auto !important; }
+
+figure.wp-block-image img {
+  height: auto !important; }
 
 figure.wp-block-image figcaption,
 figure.wp-block-gallery figcaption {
